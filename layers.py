@@ -28,3 +28,11 @@ def conv_layer(x, filter_height, filter_width,
 		out = tf.nn.relu(batch_norm)
 
 		return out
+
+def max_pool(x, name, filter_height = 2, filter_width = 2,
+	stride = 2, padding = 'VALID'):
+
+	"""Create a max pooling layer."""
+
+	return tf.nn.max_pool(x, ksize = [1, filter_height, filter_width, 1],
+		strides = [1, stride, stride, 1], padding = padding, name = name)
