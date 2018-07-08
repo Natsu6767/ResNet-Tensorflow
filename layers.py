@@ -22,7 +22,7 @@ def conv_layer(x, filter_height, filter_width,
 		z = tf.nn.bias_add(conv, b)
 
 		# Permorm batch normalization
-		batch_norm = tf.layers.batch_normalization(z, beta_initializer = tf.constant_initializer(0.0),
+		batch_norm = tf.layers.batch_normalization(z, axis = 1, beta_initializer = tf.constant_initializer(0.0),
 			gamma_initializer = tf.random_normal_initializer(mean = 0.0, stddev = 0.01))
 		# Apply ReLu non linearity.
 		out = tf.nn.relu(batch_norm)
