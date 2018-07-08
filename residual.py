@@ -16,10 +16,7 @@ def residual_block(x, out_channels, projection = False, name = 'residual'):
 		if projection:
 			# Option B: Projection Shortcut
 			# This introduces extra parameters.
-			# Stride has been set as 2 as zero-padding has been used during implementing
-			# conv_layer in layers.py. If the stride is different from 2, the spatial dimensions
-			# will change (reason 1x1 filters are used).
-			shortcut = conv_layer(x, 1, 1, out_channels, stride = 2, name = '{}_shortcut'.format(name))
+			shortcut = conv_layer(x, 1, 1, out_channels, stride = 1, name = '{}_shortcut'.format(name))
 		else:
 			# Option A: Zero-Padding
 			# This method doesn't introduce any extra parameters.
