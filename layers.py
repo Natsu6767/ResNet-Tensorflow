@@ -37,6 +37,16 @@ def max_pool(x, name, filter_height = 2, filter_width = 2,
 	return tf.nn.max_pool(x, ksize = [1, filter_height, filter_width, 1],
 		strides = [1, stride, stride, 1], padding = padding, name = name)
 
+def global_average(x, name):
+
+	"""Create a global average pooling layer"""
+
+	filter_hw = int(x.get_shape()[1])
+	gap = tf.nn.avg_pool(x, ksize = [1, filter_hw, filter_hw, 1],
+		strides = [1, 1, 1, 1], padding = 'VALID', name = name)
+
+	return gap
+
 def fc_layer(x, input_size, output_size, name, relu = True):
 
 	"""Create a fully connected layer."""
