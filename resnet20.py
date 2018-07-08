@@ -18,6 +18,7 @@ class resnet(object):
 		self.NUM_CONV = ((n - 20) / 6) + 3
 		self.X = x
 		self.NUM_CLASSES = num_classes
+		self.out = None
 
 		self.create()
 
