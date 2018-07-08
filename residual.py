@@ -10,7 +10,7 @@ def residual_block(x, out_channels, projection = False, name = 'residual'):
 	input_channels = int(x.get_shape()[-1])
 
 	conv1 = conv_layer(x, 3, 3, out_channels, stride = 1, name = '{}_conv1'.format(name))
-	conv2 = conv_layer(conv1, 3, 3 out_channels, stride = 1, name = '{}_conv2'.format(name))
+	conv2 = conv_layer(conv1, 3, 3, out_channels, stride = 1, name = '{}_conv2'.format(name))
 
 	if input_channels != out_channels:
 		if projection:
