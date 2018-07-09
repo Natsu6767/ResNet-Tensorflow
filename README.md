@@ -9,3 +9,6 @@ which you can find [here](https://mohitjain.me/2018/06/13/resnet/) with further 
 - `residual.py`: Implementation of a single residual block.
 - `ResNet Train.ipynb`: Notebook to train the implementation of ResNet.
 - `layers`: Contains files implementing basic layers [convolutions, max pooling and fully connected].
+
+
+If you are having trouble viewing the notebook file, click [here](http://nbviewer.jupyter.org/github/Natsu6767/ResNet-Tensorflow/blob/master/ResNet%20Train.ipynb)
