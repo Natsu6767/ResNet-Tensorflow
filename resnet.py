@@ -5,7 +5,7 @@ The architecture is based on the ResNet-n architecture
 perform analysis and tests on CIFAR-10 dataset.
 
 Paper: Deep Residual Learning for Image Recognition
-(https://arxiv.org/abs/1512.03385)
+https://arxiv.org/abs/1512.03385
 
 Explanation on ResNet can be found in my blog post:
 https://mohitjain.me/2018/06/13/resnet/
